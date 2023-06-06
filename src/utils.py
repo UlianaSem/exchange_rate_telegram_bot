@@ -38,6 +38,7 @@ def get_desired_currency(rates_dictionary, currency):
 def check_in_file(currency, rate, rates_dictionary, path_to_file):
     """
     Проверяет курс записанный в файле, и возвращает ответ об изменение курса в виде строки
+    :param path_to_file: путь к файлу
     :param rates_dictionary: словарь с курсами валют
     :param currency: валюта
     :param rate: курс
@@ -70,6 +71,7 @@ def check_in_file(currency, rate, rates_dictionary, path_to_file):
 def update_file(rates_dictionary, path_to_file):
     """
     Обновляет файл с курсами валют
+    :param path_to_file: путь к файлу
     :param rates_dictionary: словарь с курсами для записи
     """
     rates_string = json.dumps(rates_dictionary)
